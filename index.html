@@ -8,6 +8,28 @@
     <title>Drum Machine</title>
     <script>
         function play(str) {
+            
+            
+            if (str === "q" || str === "Q") {
+                document.getElementById('display').innerText = "Heater-1";
+            } else if (str === "w" || str === "W") {
+                document.getElementById('display').innerText = "Heater-2";
+            } else if (str === "e" || str === "E") {
+                document.getElementById('display').innerText = "Heater-3";
+            } else if (str === "a" || str === "A") {
+                document.getElementById('display').innerText = "Heater-4";
+            } else if (str === "s" || str === "S") {
+                document.getElementById('display').innerText = "Clap";
+            } else if (str === "d" || str === "D") {
+                document.getElementById('display').innerText = "Open-HH";
+            } else if (str === "z" || str === "Z") {
+                document.getElementById('display').innerText = "Kick-n'-Hat";
+            } else if (str === "x" || str === "X") {
+                document.getElementById('display').innerText = "Kick";
+            } else if (str === "c" || str === "C") {
+                document.getElementById('display').innerText = "Closed-HH";
+            }
+            
             var audio = document.getElementById(str);
             audio.play();
         }
@@ -39,41 +61,45 @@
 <body>
     <div class="container" id="drum-machine">
         <h1 class="text-center">Drum Machine</h1>
-        <div id="display"></div>
-        <div class="d-grid gap-2">
-            <button class="drum-pad btn btn-success" id="drum-0" onclick="play('Q')">
+        <div class="card my-3">
+            <div class="card-body">
+                <div class="text-center" id="display">The display is here</div>
+            </div>
+        </div>
+            <div class="d-grid gap-2">
+            <button class="drum-pad btn btn-success" id="Heater-1" onclick="play('Q')">
                 Q
                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" class="clip" id="Q"></audio>
             </button>
-            <button class="drum-pad btn btn-success" id="drum-1" onclick="play('W')">
+            <button class="drum-pad btn btn-success" id="Heater-2" onclick="play('W')">
                 W
                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" class="clip" id="W"></audio>
             </button>
-            <button class="drum-pad btn btn-success" id="drum-2" onclick="play('E')">
+            <button class="drum-pad btn btn-success" id="Heater-3" onclick="play('E')">
                 E
                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" class="clip" id="E"></audio>
             </button>
-            <button class="drum-pad btn btn-success" id="drum-3" onclick="play('A')">
+            <button class="drum-pad btn btn-success" id="Heater-4" onclick="play('A')">
                 A
                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" class="clip" id="A"></audio>
             </button>
-            <button class="drum-pad btn btn-success" id="drum-4" onclick="play('S')">
+            <button class="drum-pad btn btn-success" id="Clap" onclick="play('S')">
                 S
                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" class="clip" id="S"></audio>
             </button>
-            <button class="drum-pad btn btn-success" id="drum-5" onclick="play('D')">
+            <button class="drum-pad btn btn-success" id="Open-HH" onclick="play('D')">
                 D
                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" class="clip" id="D"></audio>
             </button>
-            <button class="drum-pad btn btn-success" id="drum-6" onclick="play('Z')">
+            <button class="drum-pad btn btn-success" id="Kick-n'-Hat" onclick="play('Z')">
                 Z
                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" class="clip" id="Z"></audio>
             </button>
-            <button class="drum-pad btn btn-success" id="drum-7" onclick="play('X')">
+            <button class="drum-pad btn btn-success" id="Kick" onclick="play('X')">
                 X
                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" class="clip" id="X"></audio>
             </button>
-            <button class="drum-pad btn btn-success" id="drum-8" onclick="play('C')">
+            <button class="drum-pad btn btn-success" id="Closed-HH" onclick="play('C')">
                 C
                 <audio src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" class="clip" id="C"></audio>
             </button>
